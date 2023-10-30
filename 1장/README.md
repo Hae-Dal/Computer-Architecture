@@ -38,7 +38,7 @@
 
 
 ### 기계어의 형식
->예. ![](./opcode,%20operand.PNG){: width="50%" height="80%"}
+>예. ![](./opcode,%20operand.PNG){: width="50%" height="50%"}
 >
 >- 연산코드(op code)
 >   - 연산에 사용할 데이터 or 데이터 주소
