@@ -56,7 +56,7 @@
 >- 과정
 >   - 각 명령어 사이클의 시작 단계에서 프로그램 카운터가 가리키는 기억장치의 위치에서 명령어 인출 &rarr; PC + 1 (여기서 1은 주소의 용량에 따라 바뀔 수 있음)
 >- 인출 사이클의 마이크로 연산  
->   <img src="./Fetch cycle micro operation.png">
+>   <img src="../images/Fetch cycle micro operation.png">
 >   1. 현재의 PC 내용을 CPU 내부 버스를 통해 MAR로 전송
 >   2. 그 주소가 지정하는 기억장치 위치로부터 읽어진 명령어가 데이터 버스를 통해 MBR로 적재 후 PC의 주소값에 +1
 >   3. MBR에 있는 명령어 코드가 명령어 레지스터인 IR로 이동
@@ -77,7 +77,65 @@
 >   - CPU가 수행할 연산을 지정
 >- 오퍼랜드(Operand)
 >   - 명령어 실행에 필요한 데이터가 저장된 주소  
->   <img src="../1장/opcode, operand.PNG" width="80%" height="80%"/>  
+>   <img src="../images/opcode, operand.PNG" width="80%" height="80%"/>  
 
 ### 어셈블리 프로그램 실행과정의 예
+><img src="../images/assembly program execution example 1.png">  
 >
+><img src="../images/assembly program execution example 2.png">  
+>
+><img src="../images/assembly program execution example 3.png">  
+>
+><img src="../images/assembly program execution example 4.png">  
+>
+><img src="../images/assembly program execution example 5.png">  
+
+### 인터럽트 사이클
+>- 인터럽트 : 프로그램을 실행 중에 중단시키고 다른 동작을 수행하게 만드는 시스템 동작
+>- 인터럽트 서비스 루틴(interrupt service routine: ISR) : 인터럽트를 처리하기 위해 수행되는 프로그램 루틴
+>- 인터럽트에 의한 제어의 이동
+>   <img src="../images/interrupt flow.png">  
+>
+>#### 인터럽트 처리 과정
+>   1. 현재의 명령어 실행을 끝낸 즉시, 다음에 실행할 명령어의 주소(PC의 내용)를 스택에 저장 &rarr; 일반적으로 스택은 주 기억장치의 특정 부분
+>   2. ISR을 호출하기 위해 인터럽트 서비스 루틴의 시작주소를 PC에 적재
+>       &rarr; 이 때 시작주소는 인터럽트를 요구한 장치에서 전송 또는 미리 정해진 값으로 결정  
+>
+>- 인터럽트 사이클이 추가된 명령어 사이클
+>   <img src="../images/interupt cycle added instruction cycle.png">  
+>
+>- 인터럽트 사이클의 마이크로 연산 예시
+>   <img src="../images/interrupt cycle micro operation example 1.png">  
+>   <img src="../images/interrupt cycle micro operation example 2.png">  
+>
+>- 다중 인터럽트 처리방법
+>   1. CPU가 인터럽트 서비스 루틴을 처리하고 있는 도중에는 새로운 인터럽트 요구가 들어와도 무시
+>       - 인터럽트 플래그 &larr; 0 : 인터럽트 불가 상태
+>       - 도중에 중단 불가능한 인터럽트 처리 시 사용
+>   2. 인터럽트의 <u>우선순위</u>를 정하고, 우선순위가 높은 인터럽트 일 경우에 먼저 처리  
+
+### 간접 사이클
+>- 명령어에 포함되어 있는 주소를 이용, 그 명령어 실행에 필요한 데이터 주소를 인출하는 사이클
+>   &rarr; 간접 주소지정 방식에서 사용
+>- 인출 사이클과 실행 사이클 사이에 위치  
+
+### 명령어 파이프라이닝
+>- CPU의 프로그램 처리속도를 높이기 위해 CPU 내부 하드웨어를 여러 단계로 나누어 동시에 처리하는 기술  
+>
+>- 2단계 파이프라인과 시간 흐름도
+>   <img src="../images/2-stage pipeline time flow.png">
+>   - 명령어 처리 속도 2배 향상
+>   - 문제점 : 두 단계의 처리 시간이 동일하지 않으면 효율 저하  
+>
+>- 4단계 명령어 파이프라인
+>   - 명령어 인출(IF) 단계 : 다음 명령어를 기억장치로부터 인출
+>   - 명령어 해독(ID) 단계 : 해독기(Decoder)를 이용해서 명령어를 해석
+>   - 오퍼랜드 인출(OF) 단계 : 기억장치로부터 오퍼랜드를 인출
+>   - 실행(EX) 단계 : 지정된 연산 수행
+>   - 4단계 파이프라인과 시간 흐름도
+>   <img src="../images/4-stage pipeline time flow.png">
+>- 파이프라인에 의한 전체 명령어 실행 시간
+>   - 파이프라인 단계 수 = k
+>   - 실행할 명령어 수 = N
+>   - 파이프라인 단계가 한 클록 주기씩 걸린다고 가정 &rarr; 파이프라인에 의한 전체 명령어 실행시간
+>       : T = k + (N - 1)

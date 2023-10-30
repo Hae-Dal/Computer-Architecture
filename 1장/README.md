@@ -38,7 +38,7 @@
 
 
 ### 기계어의 형식
->예. <img src="./opcode,%20operand.PNG" width="50%" height="50%"/>
+>예. <img src="../images/opcode, operand.PNG" width="50%" height="50%"/>
 >
 >- 연산코드(op code)
 >   - 연산에 사용할 데이터 or 데이터 주소
@@ -89,7 +89,7 @@
 >       - 주기억장치 &rlarr; CPU 보다 느린 속도를 보완하기 위해
 >       - 입력과 출력이 끝났는지 알려줌
 >- I/O 장치 접속 사례 : CPU-키보드 & 프린터
->   <img src="./IO device example.png" width="80%" height="80%">
+>   <img src="../images/IO device example.png" width="80%" height="80%">
 >- I/O 장치 제어기
 >   - 기능 : CPU로부터 I/O 명령을 받아서, 장치 제어, 데이터 이동 등 명령을 수행
 >   - 상태 레지스터
