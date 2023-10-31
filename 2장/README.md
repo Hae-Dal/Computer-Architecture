@@ -231,4 +231,22 @@
 >  
 >   - 3 주소 명령어 : 세 개의 오퍼랜드를 포함하는 명령어
 >       - 예. <img src="../images/3 address instruction example.png"/>  
->
+>  
+>#### 주소지정 방식의 종류  
+>   - 직접 주소지정 방식  
+>       - 장점 : 데이터 인출을 위해 한 번의 기억장치 액세스만 필요  
+>       - 단점 : 직접 지정할 수 있는 기억장소의 수가 제한  
+>       <img src="../images/direct addressing mode.png"/>  
+>   - 간접 주소지정 방식  
+>       - 장점 : 최대 기억장치용량이 단어의 길이에 의하여 결정  
+>           단어 길이가 n비트라면, 최대 2<sup>n</sup>개의 기억장소에 대한 주소 지정 가능  
+>       - 단점 : 실행 사이클 동안에 두 번의 기억장치 액세스 필요  
+>       <img src="../images/indirect addressing mode.png"/>  
+>   - 변위 주소 지정 방식
+>       - 사용하는 레지스터에 따라 방식이 달라짐
+>           - PC &rarr; <u>상대 주소지정 방식</u>
+>           - 인덱스 레지스터 &rarr; 인덱스 주소지정 방식
+>           - 베이스 레지스터 &rarr; 베이스-레지스터 주소지정 방식
+>       - 상대 주소지정 방식
+>           - PC를 레지스터로 사용해서 EA를 계산
+>           <img src="../images/relative addressing mode example.png"/>  
