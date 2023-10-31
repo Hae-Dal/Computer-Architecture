@@ -62,12 +62,12 @@
 >**삽입 연산**  
 >   1. 삽입할 비트 위치들에 대하여 <u>마스크 연산 수행</u>  
 >   2. 새로이 삽입할 비트들과 <u>OR 연산을 수행</u>  
->   <img src="../images/insert operation.png"/>  
+>   **예.**<img src="../images/insert operation.png"/>  
 >___  
 >**비교 연산**  
 >   - A, B 레지스터의 내용 비교 &Rightarrow; XOR 연산  
 >   - 서로 다르면 1, 같으면 0  
->   <img src="../images/compare operation.png"/>  
+>   **예.**<img src="../images/compare operation.png"/>  
 >___  
 >**시프트 연산**  
 >   - 좌측 시프트
