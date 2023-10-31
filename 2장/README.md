@@ -102,7 +102,7 @@
 >       &rarr; 이 때 시작주소는 인터럽트를 요구한 장치에서 전송 또는 미리 정해진 값으로 결정  
 >
 >- 인터럽트 사이클이 추가된 명령어 사이클
->   <img src="../images/interupt cycle added instruction cycle.png">  
+>   <img src="../images/interrupt cycle added instruction cycle.png">  
 >
 >- 인터럽트 사이클의 마이크로 연산 예시
 >   <img src="../images/interrupt cycle micro operation example 1.png">  
@@ -138,4 +138,7 @@
 >   - 파이프라인 단계 수 = k
 >   - 실행할 명령어 수 = N
 >   - 파이프라인 단계가 한 클록 주기씩 걸린다고 가정 &rarr; 파이프라인에 의한 전체 명령어 실행시간
->       : T = k + (N - 1)
+>       : T = k + (N - 1)  
+
+### 상태 레지스터
+>
