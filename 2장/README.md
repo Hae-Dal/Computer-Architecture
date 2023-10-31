@@ -174,7 +174,7 @@
 >  
 >#### 듀얼-코어 프로세서
 >   - 단일-코어 슈퍼스칼라 프로세서에 비해 2배의 속도 향상 기대  
->   <img src="../images/dual core processor.png"/>  
+>   <img src="../images/dual core processor.png"/>   
 >   **CPU는 1개, 코어가 2개, 버스 인터페이스 및 캐시는 1개이기때문에 버스 및 캐시를 사용하는 작업은 동시에 불가**  
 >  
 >#### 멀티-스레딩
