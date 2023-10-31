@@ -35,4 +35,18 @@
 
 ### 제어 기억장치의 내부 구성
 >- 마이크로프로그램 루틴들을 제어 기억장치에 저장한 예  
-><img src="../images/Control memory internal configuration.png"/>
+><img src="../images/Control memory internal configuration.png" width="80%" height="80%"/>
+
+### 명령어 해독 과정
+>#### 명령어 해독  
+>   : 명령어의 연산 코드가 지정하는 연산을 위한 실행 사이클 루틴의 시작 주소를 결정하는 동작  
+>#### 사상(mapping)을 이용한 방법  
+>   : 명령어의 연산코드를 특정 패턴과 조합하여 실행 사이클 루틴 주소 찾아내는 방법  
+>   <img src="../images/mapping method.png"/>  
+
+### 마이크로명령어의 형식
+>- 연산 필드가 두 개이면, 두 개의 마이크로-연산을 동시에 수행 가능
+>- 조건 필드는 분기에 사용될 조건 플래그를 지정
+>- 분기 필드는 분기의 종류와 다음에 실행할 마이크로 명령어의 주소를 결정하는 방법을 명시
+>- 주소 필드의 내용은 분기가 발생하는 경우에 목적지 마이크로명령어의 주소로 사용
+><img src="../images/micro instruction form.png"/>  
