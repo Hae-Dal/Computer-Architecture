@@ -28,7 +28,7 @@
 >#### 명령어 사이클
 > : CPU가 한 개의 명령어를 실행하는데 필요한 전체 처리 과정
 >
->   <img src="./Basic Instruction cycle.PNG"/>
+>   <img src="../images/Basic Instruction cycle.PNG"/>
 >
 >#### 두개의 부사이클(subcycle)들로 분리
 >   - 인출 사이클(fetch cycle) : CPU가 기억 장치로부터 <u>명령어를 읽어오는 단계</u>
@@ -49,7 +49,7 @@
 >       - 쓰여질 or 읽혀진 데이터를 일시적으로 저장하는 버퍼 레지스터
 > 
 >#### 데이터 통로가 표시된 CPU 내부 구조
->   <img src="./CPU Internal Structure.png"/>  
+>   <img src="../images/CPU Internal Structure.png"/>  
 
 ### 인출 사이클
 >- 기억장치의 지정된 위치로부터 명령어를 읽어오는 과정
