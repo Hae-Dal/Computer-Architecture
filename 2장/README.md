@@ -209,6 +209,7 @@
 >   - CALL 명령어 : 현재의 PC내용을 스택에 저장, 서브루틴 시작주소로 분기(GoTo와 비슷함)  
 >   - RET 명령어 : CPU가 원래 실행하던 프로그램으로 복귀(return)시키는 명령어  
 >   <img src="../images/subroutine execution sequence.png"/>  
+>
 
 ### 명령어 형식  
 >#### 명령어의 구성요소들  
@@ -218,13 +219,16 @@
 >   - 필드 : 명령어의 각 구성 요소들에 소요되는 비트 그룹
 >   - 명령어 길이 : 단어(word) 길이  
 >   <img src="../images/Instruction format.png"/>  
+>  
 >   **오퍼랜드1은 보통 ALU에서 사용하는 레지스터이며, 오퍼랜드2는 보통 주소값이다.**  
 >
 >#### 오퍼랜드 수에 따른 명령어 분류  
 >   - 1 주소 명령어 : 오퍼랜드를 한 개만 포함하는 명령어
 >       - 예. <img src="../images/1 address instruction example.png"/>  
+>  
 >   - 2 주소 명령어 : 두 개의 오퍼랜드를 포함하는 명령어
 >       - 예. <img src="../images/2 address instruction example.png"/>  
+>  
 >   - 3 주소 명령어 : 세 개의 오퍼랜드를 포함하는 명령어
 >       - 예. <img src="../images/3 address instruction example.png"/>  
 >
