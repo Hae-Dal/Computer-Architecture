@@ -49,26 +49,26 @@
 >**OR 연산 : 둘 중 1개만 1일경우 1**  
 >**XOR 연산 : 두 비트가 다를 경우 1**  
 >**NOT 연산 : 모든 비트 반전**  
->___
+>___  
 >**선택적-세트 연산**  
 >   **예.**<img src="../images/selective-set operation.png"/>  
->___
+>___  
 >**선택적-보수 연산**  
 >   **예.**<img src="../images/selective-complement operation.png"/>  
->___
+>___  
 >**마스크 연산**  
 >   **예.**<img src="../images/mask operation.png"/>  
->___
+>___  
 >**삽입 연산**  
 >   1. 삽입할 비트 위치들에 대하여 <u>마스크 연산 수행</u>  
 >   2. 새로이 삽입할 비트들과 <u>OR 연산을 수행</u>  
 >   <img src="../images/insert operation.png"/>  
->___
+>___  
 >**비교 연산**  
 >   - A, B 레지스터의 내용 비교 &Rightarrow; XOR 연산  
 >   - 서로 다르면 1, 같으면 0  
 >   <img src="../images/compare operation.png"/>  
->___
+>___  
 >**시프트 연산**  
 >   - 좌측 시프트
 >   - 우측 시프트
